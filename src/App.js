@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import MyProvider from "./domains/Tasks/context/MyProvider";
+import useTodo from "./domains/Tasks/context/hooks/useToDo";
+import MainComponent from "./domains/Tasks/components/mainComponet";
 
 function App() {
+ 
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyProvider>
+          <MainComponent/>
+      </MyProvider>
+      
     </div>
   );
 }
